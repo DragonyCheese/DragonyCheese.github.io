@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Spirit-Crushing Rock Paper Scissors</title>
+
+		<link rel='stylesheet' type="text/css" href="rps_style.css">
+		<script src="rps_script.js"></script>
+
+	</head>
+
+	<body>
+		<div id='bigBox'>
+			<h1>Spirit-Crushing Rock Paper Scissors</h1>
+
+			<h2>The best way to lower your self-esteem since the invention of the internet!</h2>
+
+			<!-- player box -->
+			<div id='player'>
+				
+				<p id='boxTitle'>Player</p>
+
+				<p id='player-image'></p>
+
+			</div>
+
+			<!-- score board -->
+			<div id='board'>
+				
+				<p id='boxTitle'>Scoreboard</p>
+
+				<p id='scoreText'></p>
+
+				<p>Your Score: <span id='playerScore'>0</span></p>
+				<p>Their Score: <span id='computerScore'>0</span> </p> 
+					
+				<span id='winLossHeader'>Total Wins:<span id='wins'>0</span> <span id='winLossHeader'>Total Losses:<span id='losses'>0</span></span></span>
+
+			</div>
+
+			<!-- cp box -->
+			<div id='computer'>
+				
+				<p id='boxTitle'>Bot</p>
+
+				<p id='computer-image'></p>
+
+			</div>
+
+			<div style='clear:both;'></div>
+
+			<div id='choices'>
+
+				<a href="#" Onclick="update(1);">
+					<img src="img/rock.jpg">
+				</a>
+
+				<a href="#" Onclick="update(2);">
+					<img src="img/paper.jpg">
+				</a>
+				
+				<a href="#" Onclick="update(3)">
+					<img src="img/scissors.jpg">
+				</a>
+
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,4 +1,20 @@
-body {
-	font-size:large;
-	font-weight: bold;
+p {
+	font-size:125%;
+	font-family: 'Roboto Slab', serif;
+}
+img {
+	height: 300px;
+}
+
+header {
+	font-size: 200%;
+	font-family: 'Roboto Slab', serif;
+}
+h1 {
+	font-family: 'Roboto Slab', serif;
+}
+div {
+	background-color: darkblue;
+	color:white;
+	width: 450px;
 }
