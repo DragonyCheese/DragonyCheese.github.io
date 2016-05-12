@@ -1,0 +1,79 @@
+.pln { color: #2c2c8c }  /* plain text */
+
+@media screen {
+  .str { color: #690 }  /* string content */
+  .kwd { color: #07a }  /* a keyword */
+  .com { color: #708090 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #905 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #07a }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+pre.xprettyprint {
+  color: #2c2c8c;
+  padding: 0 7px;
+  background: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-bottom: #c5cce4 solid 1px;
+  font: 15px/26px monospace, "Lucida Console", Monaco;
+  vertical-align: text-bottom;
+  overflow: hidden;
+  line-height: 18px;
+  white-space: pre-wrap;
+  margin: 30px 0;
+  padding: 18px 10px 18px 20px;
+}
+
+pre.prettyprint { 
+  margin: 0 0 30px -20px;
+  background: url(../images/pattern-white.png) #fdfdfd;
+  box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1) inset;
+  overflow: hidden;
+  border: #e8ebf5 solid 1px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 18px 10px 18px 20px;
+  color: #2c2c8c;
+  display: block;
+  font: 15px "Consolas", monospace, "Lucida Console", Monaco;
+  line-height: 18px;
+  white-space: pre-wrap;
+}
+
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: decimal; }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #fff }

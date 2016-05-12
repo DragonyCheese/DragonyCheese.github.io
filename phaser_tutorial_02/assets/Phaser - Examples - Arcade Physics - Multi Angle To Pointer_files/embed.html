@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://examples.phaser.io/embed.php?f=arcade+physics/multi+angle+to+pointer.js -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Phaser Example Runner</title>
+        <meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0 minimal-ui">
+        <script src="./jquery-2.0.3.min(1).js" type="text/javascript"></script>
+        <script src="./phaser.2.4.6.min.js" type="text/javascript"></script>
+        <script src="./blob.js" type="text/javascript"></script>
+        <script src="./canvas-to-blob.js" type="text/javascript"></script>
+        <script src="./filesaver.js" type="text/javascript"></script>
+        <script src="./embed(1).js" type="text/javascript"></script>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: Arial;
+                font-size: 14px;
+                background-color: #000000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="phaser-example"><canvas width="800" height="600" style="display: block; touch-action: none; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 800px; height: 600px; cursor: inherit;"></canvas></div>
+
+        <script type="text/javascript">
+
+        var IDE_HOOK = false;
+        var VERSION = '2.4.6';
+
+        
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update });
+
+function preload() {
+    game.load.image('arrow', 'assets/sprites/longarrow.png');
+}
+
+var sprite1;
+var sprite2;
+var sprite3;
+var sprite4;
+
+function create() {
+
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    game.stage.backgroundColor = '#363636';
+
+    sprite1 = game.add.sprite(150, 150, 'arrow');
+    sprite1.anchor.setTo(0.1, 0.5);
+
+    sprite2 = game.add.sprite(200, 500, 'arrow');
+    sprite2.anchor.setTo(0.1, 0.5);
+
+    sprite3 = game.add.sprite(400, 200, 'arrow');
+    sprite3.anchor.setTo(0.1, 0.5);
+
+    sprite4 = game.add.sprite(600, 400, 'arrow');
+    sprite4.anchor.setTo(0.1, 0.5);
+
+}
+
+function update() {
+
+    //  This will update the sprite.rotation so that it points to the currently active pointer
+    //  On a Desktop that is the mouse, on mobile the most recent finger press.
+
+    sprite1.rotation = game.physics.arcade.angleToPointer(sprite1);
+    sprite2.rotation = game.physics.arcade.angleToPointer(sprite2);
+    sprite3.rotation = game.physics.arcade.angleToPointer(sprite3);
+    sprite4.rotation = game.physics.arcade.angleToPointer(sprite4);
+
+}
+        
+        </script>
+
+    
+</body></html>
