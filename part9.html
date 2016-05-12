@@ -137,13 +137,13 @@ function update() {
 
 
 	 if (baddie.x <= 470) {
-			 baddie.animations.play('right', 5, true);
-			 baddie.x += 0.05;
+			 baddie.animations.play('right', 7, true);
+			 baddie.x += 0.08;
 	 }
 
 	else if (baddie.x >= 700) {
-		baddie.animations.play('left', 5, true);
-		baddie.x -= .05;
+		baddie.animations.play('left', 7, true);
+		baddie.x -= .08;
 	}
 
     if (cursors.left.isDown)
